@@ -1,31 +1,44 @@
 <html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <style>
   h1 {
     color: black;
     font-family: "Epilogue";
     font-size: 150px;
     display: inline-block;
-    margin: 0;
+    margin: 0px;
 }
-  
-  a {
-    color: #AC8169;
-    text-decoration: none;
-    font-size: 30px
-  }
-
   h2 {
     color: #AC8169;
     font-family: "Epilogue";
-    font-size: 20px
-}
+    font-size: 20px;
+  }  
+
+  h3 {
+    color: #AC8169;
+    font-family: "Epilogue";
+    font-size: 30px;
+    display: inline-block;
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: #AC8169;
+    text-decoration: none;
+    font-size: 30px;
+  }
 
   body {
+    position: relative;
     background: #AC8169;
+    -webkit-tap-highlight-color: transparent;
 }
 
-  body.dark {
+  body.light {
     background: rgb(253, 250, 200);
 }
 
@@ -34,7 +47,7 @@
   display: inline-block;
   width: 270px;
   height: 100px;
-  transform: translate(60px, -280px) rotate(56deg);
+  transform: translate(60px, -200px) rotate(56deg);
   z-index: 1
 }
 
@@ -142,7 +155,7 @@ input:checked + .slider:before {
   }
   .Oakley {
     position: absolute;
-    right: 10px;
+    right: -60px;
     bottom: 10px;
   }
 
@@ -153,7 +166,7 @@ input:checked + .slider:before {
   }
 </style>
 </head>
-<body position: relative;>
+<body>
     <h1>
       <span class="J">J</span>
     </h1>
@@ -175,52 +188,70 @@ input:checked + .slider:before {
   <span class="slider round"></span>
 </label>
 
-    <h1>
+    <div>
+    <h3>
         <a href="#">
             The<br>Weekly<br>Spar
         </a>
-    </h1>
-    <h1>
+    </h3>
+    </div>
+    <div>
+    <h3>
         <a href="#">
             Fervo
         </a>
-    </h1>
-    <h1>
+    </h3>
+    </div>
+    <div>
+    <h3>
         <a href="#">
             HTCN
         </a>
-    </h1>
-    <h1>
+    </h3>
+  </div>
+  <div>
+    <h3>
         <a href="#">
             Resume
         </a>
-    </h1>
-    <h1>
+    </h3>
+  </div>
+  <div>
+    <h3>
         <a href="#">
             Website
         </a>
-    </h1>
-    <h1>
+    </h3>
+  </div>
+  <div>
+    <h3>
         <a href="#">
             LinkedIn
         </a>
-    </h1>
-    <h1>
+    </h3>
+  </div>
+  <div>
+    <h3>
       <a href="#">
           The<br>Sack<br>of Troy
       </a>
-  </h1>
-      <h1>
+  </h3>
+  </div>
+  <div>
+      <h3>
         <a href="#">
             The<br>Suspenders
         </a>
-    </h1>
+    </h3>
+  </div>
+  <div>
     <h2>
         <span class = "OakleyText">Oakley!</span>
     </h2>
+  </div>
 
 <!-- Oakley -->
-    <svg class="Oakley" width="332" height="275" viewBox="0 0 707 585" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="Oakley" width="500" height="275" viewBox="0 0 707 585" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="Oakley">
       <g id="lightGroup">
         <path d="M193.612 106H537.612V366H193.612V106Z"/>
@@ -242,17 +273,19 @@ input:checked + .slider:before {
   <script>
     const svg = document.getElementById('Oakley');
     svg.onclick = (e) => {
-      const colors = ['red', 'orange','yellow','green','blue','indigo','violet']
-      const rando = () => colors[Math.floor(Math.random()*colors.length)]
+      const lightcolors = ['#FF9AA2', '#FFB7B2','#FFDAC1','#E2F0CB','#B5EAD7','#C7EEA1'];
+      const darkcolors = ['#A3B5DD', '#D09291','#BF94CB','#A1D0C0','#C37791'];
+      const lightrando = () => lightcolors[Math.floor(Math.random()*lightcolors.length)];
+      const darkrando = () => darkcolors[Math.floor(Math.random()*darkcolors.length)];
       document.documentElement.style.cssText = `
-      --dark-color: ${rando()};
-      --light-color: ${rando()};
+      --dark-color: ${darkrando()};
+      --light-color: ${lightrando()};
       `
     }
     const checkbox = document.getElementById('checkbox');
     checkbox.addEventListener('click', () => {
-    document.body.classList.toggle('dark', checkbox.checked);
-    });e
+    document.body.classList.toggle('light', checkbox.checked);
+    });
   </script>
   </body>
 </html>
