@@ -1,13 +1,13 @@
 const svg = document.getElementById('Oakley');
 svg.onclick = (e) => {
-    const lightcolors = ['#FF9AA2', '#FFB7B2','#FFDAC1','#E2F0CB','#B5EAD7','#C7EEA1'];
-    const darkcolors = ['#A3B5DD', '#D09291','#BF94CB','#A1D0C0','#C37791'];
+    const lightcolors = ['#FFB3BA', '#BAFFC8','#BAE1FF','#FFFFB9','#FFDFBB'];
+    // const darkcolors = ['#A3B5DD', '#D09291','#BF94CB','#A1D0C0','#C37791'];
     const lightrando = () => lightcolors[Math.floor(Math.random()*lightcolors.length)];
-    const darkrando = () => darkcolors[Math.floor(Math.random()*darkcolors.length)];
+    // const darkrando = () => darkcolors[Math.floor(Math.random()*darkcolors.length)];
     document.documentElement.style.cssText = `
-    --dark-color: ${darkrando()};
-    --light-color: ${lightrando()};
-    `
+    --light-color: ${lightrando()};`
+    // --dark-color: ${darkrando()};
+    // `
 }
 const checkbox = document.getElementById('checkbox');
 checkbox.addEventListener('click', () => {
