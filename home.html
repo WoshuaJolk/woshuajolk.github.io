@@ -46,7 +46,7 @@
   }
 
   body.light {
-    background: rgb(253, 250, 200);
+    background: rgb(243, 235, 202);
   }
 
 .switch {
@@ -173,7 +173,9 @@ input:checked + .slider:before {
   }
         .mydiv {
           z-index: 9;
-          background-color: #f1f1f1;
+          background-color: rgb(247, 245, 210);
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
           width: 520px;
           position: absolute;
           text-align: center;
@@ -187,11 +189,11 @@ input:checked + .slider:before {
         /* Container for columns and the top "toolbar" */
         .row {
           padding: 10px;
-          background-color: #eaeaea;
+          background-color: #d8d5c0;
           width: 518px;
           color: #fff;
-          border-top-left-radius: 4px;
-          border-top-right-radius: 4px;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
           cursor: move;
           z-index: 10;
         }
@@ -223,9 +225,9 @@ input:checked + .slider:before {
 
 /* The browser window */
 .container {
-  border: 1px solid #f1f1f1;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border: 1px solid #9d9d9d;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 /* Create three unequal columns that floats next to each other */
@@ -239,7 +241,7 @@ input:checked + .slider:before {
 }
 
 .left {
-  width: 50px;
+  width: 60px;
 }
 
 .right {
@@ -254,7 +256,7 @@ input:checked + .slider:before {
   clear: both;
 }
 
-/* Three dots */
+/* Three dots
 .dot {
   margin-top: 4px;
   height: 12px;
@@ -262,6 +264,39 @@ input:checked + .slider:before {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+} */
+
+.rdot {
+  background: #ED594A;
+  margin-left: 3px;
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  border: .75px solid #ca4d3f;
+  /* background-color: #bbb; */
+  border-radius: 50%;
+  display: inline-block;
+}
+.ydot {
+  margin-left: 3px;
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  border: .75px solid #b99d00;
+  border-radius: 50%;
+  display: inline-block;
+  background:#eac700;
+}
+.gdot {
+  margin-left: 3px;
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  border: .75px solid #428f42;
+  /* background-color: #bbb; */
+  border-radius: 50%;
+  display: inline-block;
+  background: #58be58;
 }
 
 /* Page content */
@@ -329,9 +364,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="ippfheader" class="row">
           <div class="column left">
-          <span class="dot" id=r1 style="background:#ED594A;"></span>
-          <span class="dot" id=y1 style="background:#FDD800;"></span>
-          <span class="dot" id=g1 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r1></span>
+          <span class="ydot" id=y1></span>
+          <span class="gdot" id=g1></span>
           </div>
           <div class="column right">
           IPPF Writing Sample
@@ -348,9 +383,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="ippf2header" class="row">
           <div class="column left">
-          <span class="dot" id=r2 style="background:#ED594A;"></span>
-          <span class="dot" id=y2 style="background:#FDD800;"></span>
-          <span class="dot" id=g2 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r2></span>
+          <span class="ydot" id=y2></span>
+          <span class="gdot" id=g2></span>
           </div>
           <div class="column right">
           My International Public Policy Forum Team!
@@ -369,9 +404,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="suspheader" class="row">
           <div class="column left">
-          <span class="dot" id=r3 style="background:#ED594A;"></span>
-          <span class="dot" id=y3 style="background:#FDD800;"></span>
-          <span class="dot" id=g3 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r3></span>
+          <span class="ydot" id=y3></span>
+          <span class="gdot"id=g3></span>
           </div>
           <div class="column right">
           Suspenders Performance
@@ -389,9 +424,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="susp2header" class="row">
           <div class="column left">
-          <span class="dot" id=r4 style="background:#ED594A;"></span>
-          <span class="dot" id=y4 style="background:#FDD800;"></span>
-          <span class="dot" id=g4 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r4></span>
+          <span class="ydot" id=y4></span>
+          <span class="gdot" id=g4></span>
           </div>
           <div class="column right">
           Suspenders Script
@@ -408,9 +443,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="susp3header" class="row">
           <div class="column left">
-          <span class="dot" id=r5 style="background:#ED594A;"></span>
-          <span class="dot" id=y5 style="background:#FDD800;"></span>
-          <span class="dot" id=g5 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r5></span>
+          <span class="ydot" id=y5></span>
+          <span class="gdot" id=g5></span>
           </div>
           <div class="column right">
           The Suspenders!
@@ -429,9 +464,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="chessesheader" class="row">
           <div class="column left">
-          <span class="dot" id=r6 style="background:#ED594A;"></span>
-          <span class="dot" id=y6 style="background:#FDD800;"></span>
-          <span class="dot" id=g6 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r6></span>
+          <span class="ydot" id=y6></span>
+          <span class="gdot" id=g6></span>
           </div>
           <div class="column right">
           Chesses Sneak Peak :o
@@ -449,9 +484,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="chesses2header" class="row">
           <div class="column left">
-          <span class="dot" id=r7 style="background:#ED594A;"></span>
-          <span class="dot" id=y7 style="background:#FDD800;"></span>
-          <span class="dot" id=g7 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r7></span>
+          <span class="ydot" id=y7></span>
+          <span class="gdot" id=g7></span>
           </div>
           <div class="column right">
           Chesses In Progress...
@@ -469,9 +504,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="chesses3header" class="row">
           <div class="column left">
-          <span class="dot" id=r8 style="background:#ED594A;"></span>
-          <span class="dot" id=y8 style="background:#FDD800;"></span>
-          <span class="dot" id=g8 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r8></span>
+          <span class="ydot" id=y8></span>
+          <span class="gdot" id=g8></span>
           </div>
           <div class="column right">
           Chesses!
@@ -489,9 +524,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="sackheader" class="row">
           <div class="column left">
-          <span class="dot" id=r9 style="background:#ED594A;"></span>
-          <span class="dot" id=y9 style="background:#FDD800;"></span>
-          <span class="dot" id=g9 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r9></span>
+          <span class="ydot" id=y9></span>
+          <span class="gdot" id=g9></span>
           </div>
           <div class="column right">
           Get the Booster!
@@ -507,9 +542,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="sack2header" class="row">
           <div class="column left">
-          <span class="dot" id=r10 style="background:#ED594A;"></span>
-          <span class="dot" id=y10 style="background:#FDD800;"></span>
-          <span class="dot" id=g10 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r10></span>
+          <span class="ydot" id=y10></span>
+          <span class="gdot" id=g10></span>
           </div>
           <div class="column right">
           The Sack of Troy!
@@ -528,9 +563,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="troylabsheader" class="row">
           <div class="column left">
-          <span class="dot" id=r11 style="background:#ED594A;"></span>
-          <span class="dot" id=y11 style="background:#FDD800;"></span>
-          <span class="dot" id=g11 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r11></span>
+          <span class="ydot" id=y11></span>
+          <span class="gdot" id=g11></span>
           </div>
           <div class="column right">
           TroyLabs LAUNCH!
@@ -550,9 +585,9 @@ input:checked + .slider:before {
   <div class="container">
       <div id="resumeheader" class="row">
           <div class="column left">
-          <span class="dot" id=r12 style="background:#ED594A;"></span>
-          <span class="dot" id=y12 style="background:#FDD800;"></span>
-          <span class="dot" id=g12 style="background:#5AC05A;"></span>
+          <span class="rdot" id=r12></span>
+          <span class="ydot" id=y12></span>
+          <span class="gdot" id=g12></span>
           </div>
           <div class="column right">
           My Resume!
