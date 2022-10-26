@@ -111,58 +111,62 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-  :root {
+:root {
     --dark-color: #323232;
     --light-color: #AC8169;
-  }
+}
 
-  svg {
-    cursor: pointer;
-  }
+svg {
+  cursor: pointer;
+}
 
-  #darkGroup {
-    fill: var(--dark-color);
-  }
+#darkGroup {
+  fill: var(--dark-color);
+}
 
-  #lightGroup {
-    fill: var(--light-color);
-  }
+#lightGroup {
+  fill: var(--light-color);
+}
 
-  #lightGroup,
-  #darkGroup {
-    transition: all 1s ease;
-  }
-  svg:hover #lightGroup {
-    transform: translateX(20%);
-  }
-  svg:hover #darkGroup {
-    transform: translateX(23%);
-  }
+#lightGroup,
+#darkGroup {
+  transition: all 1s ease;
+}
+#tag {
+font-size: 12px;
+}
+svg:hover #lightGroup {
+  transform: translateX(20%);
+}
+svg:hover #darkGroup {
+  transform: translateX(23%);
+}
 
-  .shua {
-    position: relative;
-    left: 115px;
-  }
+.shua {
+  position: relative;
+  left: 115px;
+}
 
-  .W {
-    position: relative;
-    left: 40px;
-    z-index: 2
-  }
+.W {
+  position: relative;
+  left: 40px;
+  z-index: 2
+}
 
-  .lk {
-    position: relative;
-    left: 155px;
-  }
+.lk {
+  position: relative;
+  left: 155px;
+}
 
-  .slider {
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-  }
-  .Oakley {
-    position: fixed;
-    right: -60px;
+.slider {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.Oakley {
+  position: fixed;
+  right: -60px;
     bottom: 10px;
   }
 
@@ -321,7 +325,6 @@ input:checked + .slider:before {
   </h1>
 </div>
 
-
 <label class="switch">
 <input type="checkbox" id="checkbox" />
 <span class="slider round"></span>
@@ -334,7 +337,7 @@ input:checked + .slider:before {
         I’m currently studying business, product design, and screenwriting at the University of Southern California. 
         I’m deeply interested in technology, international affairs,  and social entrepreneurship. 
         In my free time, I write music, sketch comedy, and screenplays.<br><br>
-        I'm currently hard at work on <b><a href="https://getfervo.herokuapp.com/" target="_blank">Fervo</a></b>, a groundbreaking productivity app, and <b>Chesses</b>, a chessboard that can facilitate versions of chess from around the globe!<br><br>
+        Right now, I'm hard at work on <b><a href="https://getfervo.herokuapp.com/" target="_blank">Fervo</a></b>, a groundbreaking productivity app, and <b>Chesses</b>, a chessboard that can facilitate versions of chess from around the globe!<br><br>
         <b>Turn on the lights</b>, I'm saving energy. Check out the buttons below, get in touch via <b><a href="https://www.linkedin.com/in/joshgwolk/" target="_blank">LinkedIn</a></b>, and maybe pet my dog Oakley while you’re at it! Give him a belly rub!
   </h2>
 </div>
@@ -597,7 +600,11 @@ input:checked + .slider:before {
         <iframe src="assets/resume.pdf#toolbar=0" width="100%" height="650px">
         </iframe>
       </div>
-      </div>
+</div>
+</div>
+<div> 
+  <br><br><br><br><br><br>
+  <p id="tag">( Made from scratch with JS, HTML, CSS, and ❤️ )</p> 
 </div>
 <svg class="Oakley" width="500" height="275" viewBox="0 0 707 585" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g id="Oakley">
