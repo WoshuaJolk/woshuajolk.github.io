@@ -1,0 +1,639 @@
+<html>
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+  h1 {
+    color: black;
+    font-family: "Epilogue";
+    font-size: 150px;
+    display: inline-block;
+    margin: 0px;
+  }
+
+  h2 {
+    color: #000000;
+    font-family: "Epilogue"; font-weight: normal;
+    font-size: 15px;
+    margin: 0px;
+    line-height: 120%;
+  }  
+
+  h3 {
+    color: #AC8169;
+    font-family: "Epilogue";
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 22px;
+    margin-top: 10px;
+  }
+
+  a {
+    color: #11084b;
+  }
+
+  body {
+    position: relative;
+    background: #AC8169;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body.light {
+    background: rgb(243, 235, 202);
+  }
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 270px;
+  height: 100px;
+  transform: translate(60px, -200px) rotate(56deg);
+  z-index: 1
+  }
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 50px;
+  left: 20px;
+  bottom: 25px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #5caef1;
+
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #5caef1;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(180px);
+  -ms-transform: translateX(180px);
+  transform: translateX(180px);
+}
+
+.slider.round {
+  border-radius: 100px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+:root {
+    --dark-color: #323232;
+    --light-color: #AC8169;
+}
+
+svg {
+  cursor: pointer;
+}
+
+#darkGroup {
+  fill: var(--dark-color);
+}
+
+#lightGroup {
+  fill: var(--light-color);
+}
+
+#lightGroup,
+#darkGroup {
+  transition: all 1s ease;
+}
+#tag {
+font-size: 12px;
+}
+
+.icon:hover {
+  transform: translateY(-10%);
+  transition: all 0.25s ease;
+}
+
+svg:hover #lightGroup {
+  transform: translateX(20%);
+}
+svg:hover #darkGroup {
+  transform: translateX(23%);
+}
+
+.shua {
+  position: relative;
+  left: 115px;
+}
+
+.W {
+  position: relative;
+  left: 40px;
+  z-index: 2
+}
+
+.lk {
+  position: relative;
+  left: 155px;
+}
+
+.slider {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.Oakley {
+  position: fixed;
+  right: -60px;
+    bottom: 10px;
+  }
+
+  .Intro {
+    position: relative;
+    bottom: 15px;
+    max-width: 800px;
+  }
+        .mydiv {
+          z-index: 9;
+          background-color: rgb(247, 245, 210);
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          width: 520px;
+          position: absolute;
+          text-align: center;
+          display: none;
+        }
+
+        .pic {
+          border-radius: 10px;
+        }
+
+        /* Container for columns and the top "toolbar" */
+        .row {
+          padding: 10px;
+          background-color: #d8d5c0;
+          width: 518px;
+          color: #fff;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          cursor: default;
+          z-index: 10;
+        }
+
+        #ippfheader {
+        width: max(100%,250px);
+        }
+
+        #resumeheader {
+        width: 700px;
+        }
+
+        #resumecontent {
+        width: 700px;
+        }
+
+        #resume {
+          width: 702px;
+        }
+
+
+        body {
+        font-family: Epilogue;
+        }
+
+* {
+  box-sizing: border-box;
+}
+
+/* The browser window */
+.container {
+  border: 1px solid #9d9d9d;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+}
+
+.default {cursor: default;}
+
+.icon {
+  float: left;
+  margin: 10px;
+  transition: all 0.25s ease;
+}
+
+.left {
+  width: 60px;
+}
+
+.right {
+  width: 75%;
+  color: black;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three dots
+.dot {
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+} */
+
+.rdot {
+  background: #ED594A;
+  margin-left: 3px;
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  border: .75px solid #ca4d3f;
+  /* background-color: #bbb; */
+  border-radius: 50%;
+  display: inline-block;
+}
+.ydot {
+  margin-left: 3px;
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  border: .75px solid #b99d00;
+  border-radius: 50%;
+  display: inline-block;
+  background:#eac700;
+}
+.gdot {
+  margin-left: 3px;
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  border: .75px solid #428f42;
+  /* background-color: #bbb; */
+  border-radius: 50%;
+  display: inline-block;
+  background: #58be58;
+}
+
+/* Page content */
+.content {
+  padding: 10px;
+}
+    </style>
+</head>
+<body>
+  <h1>
+    <span class="J">J</span>
+  </h1>
+  <h1>
+    <span class="shua">shua</span>
+  </h1>
+  <div>
+  <h1>
+    <span class="W">W</span>
+  </h1>
+  <h1>
+    <span class="lk">lk</span>
+  </h1>
+</div>
+
+<label class="switch">
+<input type="checkbox" id="checkbox" />
+<span class="slider round"></span>
+</label>
+  <div>
+  </div>
+<div>
+  <h2 class = "Intro">
+        Hi, I’m Josh!<br><br>
+        I’m currently studying business, product design, and screenwriting at the University of Southern California. 
+        I’m deeply interested in technology, international affairs,  and social entrepreneurship. 
+        In my free time, I write music, sketch comedy, and screenplays.<br><br>
+        Right now, I'm hard at work on <b><a href="https://getfervo.herokuapp.com/" target="_blank">Fervo</a></b>, a groundbreaking productivity app, and <b>Chesses</b>, a chessboard that can facilitate versions of chess from around the globe!<br><br>
+        <b>Turn on the lights</b>, I'm saving energy. Check out the buttons below, get in touch via <b><a href="https://www.linkedin.com/in/joshgwolk/" target="_blank">LinkedIn</a></b>, and maybe pet my dog Oakley while you’re at it! Give him a belly rub!
+  </h2>
+</div>
+<div>
+<div class=icon id=resumeicon> 
+  <img class="pic" src="assets/RIcon2.png" width="70px"></img>
+</div>
+<div class=icon id=chessesicon> 
+  <img class="pic" src="assets/CIcon2.png" width="70px"></img>
+</div>
+<div class=icon id=sackicon> 
+  <img class="pic" src="assets/SIcon2.png" width="70px"></img>
+</div>
+<div class=icon id=troylabsicon> 
+  <img class="pic" src="assets/TIcon2.png" width="70px"></img>
+</div>
+<div class=icon id=suspicon> 
+  <img class="pic" src="assets/UIcon2.png" width="70px"></img>
+</div>
+<div class=icon id=ippficon> 
+  <img class="pic" src="assets/IIcon2.png" width="70px"></img>
+</div>
+</div>
+<!-- Draggable DIV -->
+<div class=mydiv id="ippf">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="ippfheader" class="row">
+          <div class="column left">
+          <span class="rdot" id=r1></span>
+          <span class="ydot" id=y1></span>
+          <span class="gdot" id=g1></span>
+          </div>
+          <div class="column right">
+          IPPF Writing Sample
+          </div>
+      </div>
+      <div id="ippfcontent" class="content">
+        <iframe src="assets/IPPFSample.pdf#toolbar=0" width="490px" height="500px">
+        </iframe>
+      </div>
+      </div>
+</div>
+<div class=mydiv id="ippf2">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="ippf2header" class="row">
+          <div class="column left">
+          <span class="rdot" id=r2></span>
+          <span class="ydot" id=y2></span>
+          <span class="gdot" id=g2></span>
+          </div>
+          <div class="column right">
+          My International Public Policy Forum Team!
+          </div>
+      </div>
+      <div id="ippf2content" class="content">
+          <img src="assets/ippfpic.jpg" width="500px"></img>
+          <p>St. Louis ('20)</p>
+          <p>After months of intense written debates on immigration policy against schools around the world, as captain, I was so proud to champion the tournament with my amazing team!</p>
+          <p>Check out a writing sample from one of our debates!</p>
+      </div>
+      </div>
+</div>
+<div class=mydiv id="susp">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="suspheader" class="row">
+          <div class="column left">
+          <span class="rdot" id=r3></span>
+          <span class="ydot" id=y3></span>
+          <span class="gdot"id=g3></span>
+          </div>
+          <div class="column right">
+          Suspenders Performance
+          </div>
+      </div>
+      <div id="suspcontent" class="content">
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/7OQ37AvLhnI">
+        </iframe>
+      </div>
+      </div>
+</div>
+<div class=mydiv id="susp2">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="susp2header" class="row">
+          <div class="column left">
+          <span class="rdot" id=r4></span>
+          <span class="ydot" id=y4></span>
+          <span class="gdot" id=g4></span>
+          </div>
+          <div class="column right">
+          Suspenders Script
+          </div>
+      </div>
+      <div id="susp2content" class="content">
+        <iframe src="assets/EnGaged2.pdf#toolbar=0" width="490px" height="500px">
+        </iframe>
+      </div>
+      </div>
+</div>
+<div class=mydiv id="susp3">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="susp3header" class="row">
+          <div class="column left">
+          <span class="rdot" id=r5></span>
+          <span class="ydot" id=y5></span>
+          <span class="gdot" id=g5></span>
+          </div>
+          <div class="column right">
+          The Suspenders!
+          </div>
+      </div>
+      <div id="susp3content" class="content">
+        <img src="assets/Suspenders.jpg" width="400px"></img>
+        <p>Joshua Tree ('22)</p>
+        <p>I've met so many awesome friends @ USC through writing for the sketch comedy troupe, The Suspenders.</p>
+        <p>Check out how a sketch of mine translates to the stage!</p>
+    </div>
+      </div>
+</div>
+<div class=mydiv id="chesses">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="chessesheader" class="row">
+          <div class="column left">
+          <span class="rdot" id=r6></span>
+          <span class="ydot" id=y6></span>
+          <span class="gdot" id=g6></span>
+          </div>
+          <div class="column right">
+          Chesses Sneak Peak :o
+          </div>
+      </div>
+      <div id="chessescontent" class="content">
+        <img src="assets/ChessBotez.jpg" width="400px"></img>
+        <p>The Botez Sisters' Twitch ('22)</p>
+        <p>This was a spontaneous opportunity to present the first Chesses prototype to thousands online on Twitch! The positive feedback kept me going! 
+      </div>
+      </div>
+</div>
+<div class=mydiv id="chesses2">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="chesses2header" class="row">
+          <div class="column left">
+          <span class="rdot" id=r7></span>
+          <span class="ydot" id=y7></span>
+          <span class="gdot" id=g7></span>
+          </div>
+          <div class="column right">
+          Chesses In Progress...
+          </div>
+      </div>
+      <div id="chesses2content" class="content">
+        <img src="assets/ChessesCNC.png" width="300px"></img>
+        <p>The USC Iovine & Young Makerspace ('22) </p>
+        <p>The first batch of Chesses sets in the CNC machine! Minoring in product design, I love spending time tinkering in this incredible makerspace.
+      </div>
+      </div>
+</div>
+<div class=mydiv id="chesses3">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="chesses3header" class="row">
+          <div class="column left">
+          <span class="rdot" id=r8></span>
+          <span class="ydot" id=y8></span>
+          <span class="gdot" id=g8></span>
+          </div>
+          <div class="column right">
+          Chesses!
+          </div>
+      </div>
+      <div id="chesses3content" class="content">
+        <img src="assets/ChessesTest.png" width="300px"></img>
+        <p>The Dorm ('22) </p>
+        <p>My roommate Joe playtesting Xiangqi on my passion project, Chesses. It's the first chess set ever that can play seven different variants of chess from around the world!
+      </div>
+      </div>
+</div>
+<div class=mydiv id="sack">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="sackheader" class="row">
+          <div class="column left">
+          <span class="rdot" id=r9></span>
+          <span class="ydot" id=y9></span>
+          <span class="gdot" id=g9></span>
+          </div>
+          <div class="column right">
+          Get the Booster!
+          </div>
+      </div>
+      <div id="sackcontent" class="content">
+        <img src="assets/SackArticle.png" width="410px"></img>
+      </div>
+      </div>
+</div>
+<div class=mydiv id="sack2">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="sack2header" class="row">
+          <div class="column left">
+          <span class="rdot" id=r10></span>
+          <span class="ydot" id=y10></span>
+          <span class="gdot" id=g10></span>
+          </div>
+          <div class="column right">
+          The Sack of Troy!
+          </div>
+      </div>
+      <div id="sack2content" class="content">
+        <img src="assets/Sack.JPG" width="500px"></img>
+        <p>USC ('22) </p>
+        <p>As President of USC's second best satirical newspaper, The Sack of Troy, I'm privileged to work with so many talented writers, analyzing and critiquing campus happenings, pop culture, and current events.</p>
+        <p>Check out one of my articles!</p>
+      </div>
+      </div>
+</div>
+<div class=mydiv id="troylabs">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="troylabsheader" class="row">
+          <div class="column left">
+          <span class="rdot" id=r11></span>
+          <span class="ydot" id=y11></span>
+          <span class="gdot" id=g11></span>
+          </div>
+          <div class="column right">
+          TroyLabs LAUNCH!
+          </div>
+      </div>
+      <div id="troylabscontent" class="content">
+        <img src="assets/TroyLabs.jpg" width="500px"></img>
+        <p>Tommy's Place '22</p> 
+        <p>TroyLabs is the premiere start-up consultancy at USC. I worked face-to-face with industry professionals in the journalism, restaurant, web3, and biomedical industries on effectively marketing their pre-seed start-ups. Our accelerator has helped companies raise over $3 million!</p>
+        <p>This is me leading our biannual 3-hour LAUNCH pitch competition. After securing over $9k in funding, I hired and directly managed a 15-person staff, directed a
+          30-person in-house team, and sold out the venue (200+ people)!</p>
+      </div>
+      </div>
+</div>
+<div class=mydiv id="resume">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div class="container">
+      <div id="resumeheader" class="row">
+          <div class="column left">
+          <span class="rdot" id=r12></span>
+          <span class="ydot" id=y12></span>
+          <span class="gdot" id=g12></span>
+          </div>
+          <div class="column right">
+          My Resume!
+          </div>
+      </div>
+      <div id="resumecontent" class="content">
+        <iframe src="assets/resume.pdf#toolbar=0" width="100%" height="650px">
+        </iframe>
+      </div>
+</div>
+</div>
+<div> 
+  <br><br><br><br><br><br>
+  <p id="tag">( Made from scratch with JS, HTML, CSS, and ❤️ )</p> 
+</div>
+<svg class="Oakley" width="500" height="275" viewBox="0 0 707 585" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="Oakley">
+  <g id="lightGroup">
+    <path d="M193.612 106H537.612V366H193.612V106Z"/>
+    <path d="M706.612 236C706.612 307.797 625.351 366 525.112 366C424.872 366 343.612 307.797 343.612 236C343.612 164.203 424.872 106 525.112 106C625.351 106 706.612 164.203 706.612 236Z"/>
+    <path d="M294.612 236C294.612 307.797 251.183 366 197.612 366C144.04 366 100.612 307.797 100.612 236C100.612 164.203 144.04 106 197.612 106C251.183 106 294.612 164.203 294.612 236Z"/>
+    <path d="M272 114C272 183.588 200.229 252 135.612 252C70.9944 252 18.6117 195.588 18.6117 126C18.6117 56.4121 70.9944 0 135.612 0C200.229 0 272 44.4121 272 114Z"/>
+    <path d="M244.612 305L339.612 355L391.112 363L322.612 399L272.612 501.5V526.5L263.612 539.5L219.112 554.5L180.612 551L161.112 531.5L176.612 513.5L206.507 503.75L204.112 483.5L186.112 479L176.612 467L180.612 458.5L205.309 454.375L204.112 405L171.112 355L244.612 305Z"/>
+    <path d="M596.612 354L704.612 252L693.112 312L670 376L695.612 406L690.612 551L676.112 584.5L618.612 581L581.612 554L593.612 541.5L618.612 534.5L625.612 515L618.612 497.5L611.112 515L581.612 521L548.112 515L528.612 504L541.112 495L559.112 491L572.612 469.5L528.612 423.5L479.612 360L596.612 354Z"/>
+    <path d="M72.6117 158L126.112 235.5L93.6117 250.5L58.6117 254.5L29.3104 233L17.1117 211.5L21.6117 187L29.3104 158H72.6117Z"/>
+    <path d="M86.4133 68.8595L38.2507 140.834L21.6117 137L7.61169 146.5L2.86202e-06 137L7.61169 119.5L2.41881e-06 100.5L0 63.1369L11.1118 46.4999L46.1118 34.4999L68.1117 34.5L86.4133 68.8595Z"/>
+  </g>
+<g id="darkGroup">
+  <path d="M32.1116 202.5L54.6116 205.5L67.6116 216L65.6116 226L55.6116 234.5L45.1116 238L32.1116 230L25.76 215L32.1116 202.5Z"/>
+  <path d="M131.612 156C131.612 160.971 126.911 165 121.112 165C115.313 165 110.612 160.971 110.612 156C110.612 151.029 115.313 147 121.112 147C126.911 147 131.612 151.029 131.612 156Z" />
+  <path d="M57.5162 127.62C59.9966 131.277 59.2287 136.126 55.801 138.451C52.3732 140.777 47.5836 139.698 45.1031 136.041C42.6226 132.385 43.3906 127.536 46.8183 125.211C50.2461 122.885 55.0357 123.964 57.5162 127.62Z"/>
+</g>
+</g> 
+</svg>
+<script src="script.js"></script>
+</body>
+</html>
