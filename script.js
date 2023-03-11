@@ -9,9 +9,13 @@ svg.onclick = (e) => {
     // --dark-color: ${darkrando()};
     // `
 }
+
 const checkbox = document.getElementById('checkbox');
-checkbox.addEventListener('click', () => {
-document.body.classList.toggle('light', checkbox.checked);
+checkbox.addEventListener('change', () => {
+    document.body.classList.toggle('light', checkbox.checked);
+    document.querySelectorAll('h1').forEach((h1) => h1.classList.toggle('white-text', checkbox.checked));
+    document.querySelectorAll('h2').forEach((h2) => h2.classList.toggle('white-text', checkbox.checked));
+    document.querySelectorAll('a').forEach((a) => a.classList.toggle('white-link', checkbox.checked));
 });
 
 chessesicon.addEventListener('click', function handleClick() {
